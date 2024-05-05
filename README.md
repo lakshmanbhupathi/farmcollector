@@ -23,6 +23,7 @@ Instructions:
 5. import FarmCollector.postman_collection.json collection into postman
 6. Now you can run API's from already made API requests in Postman.
 7. Please hit /api/planted API before hitting /api/harvest API 
+8. After Data population with can you this link http://localhost:8080/crops check report on crops
 
 Instructions to run test cases:
 
