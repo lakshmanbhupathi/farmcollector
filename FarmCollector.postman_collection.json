@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "47bd7475-734c-4c9b-92de-623ac0130c56",
+		"name": "FarmCollector",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5044535"
+	},
+	"item": [
+		{
+			"name": "plantation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"farmName\":\"LucFarm\",\n    \"season\":\"Summer24\",\n    \"cropType\":\"CRON\",\n    \"plantedArea\":20,\n    \"expectedYield\":100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/planted"
+			},
+			"response": []
+		},
+		{
+			"name": "harvest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"farmName\": \"LucFarm\",\n    \"season\": \"Summer24\",\n    \"cropType\": \"CRON\",\n    \"actualYield\": 120\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/api/harvest"
+			},
+			"response": []
+		}
+	]
+}
