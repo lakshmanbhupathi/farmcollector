@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home page</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<!--<p>-->
+<!--    <span th:text="List of farm yields"></span>-->
+<!--</p>-->
+
+<div th:if="${ not#lists.isEmpty(crops)}">
+    <table>
+        <tr>
+            <th>Crop</th>
+            <th>Season</th>
+            <th>Farm Name</th>
+            <th>Planted area</th>
+            <th>Expected yield</th>
+            <th>Actual yield</th>
+        </tr>
+        <tr th:each="crop : ${crops}">
+            <td th:text="${crop.cropType}"></td>
+            <td th:text="${crop.farmName}"></td>
+            <td th:text="${crop.season}"></td>
+            <td th:text="${crop.plantedArea}"></td>
+            <td th:text="${crop.expectedYield}"></td>
+            <td th:text="${crop.actualYield}"></td>
+
+        </tr>
+        <table>
+</div>
+</body>
+</html>
