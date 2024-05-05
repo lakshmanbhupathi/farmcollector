@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/planted")
+@RequestMapping("/api")
 public class PlantedController {
 
     @Autowired
     PlantingRecordService plantingRecordService;
 
-    @PostMapping("/")
+    @PostMapping("/planted")
     Long planted(@RequestBody PlantingDto plantingDto){
         return plantingRecordService.recordPlantingDetails(plantingDto).getId();
     }

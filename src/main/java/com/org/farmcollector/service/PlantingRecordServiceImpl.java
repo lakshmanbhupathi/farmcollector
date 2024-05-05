@@ -18,6 +18,8 @@ public class PlantingRecordServiceImpl implements PlantingRecordService{
         crop.setCropType(plantingDto.cropType());
         crop.setPlantedArea(plantingDto.plantedArea());
         crop.setExpectedYield(plantingDto.expectedYield());
+        crop.setFarmName(plantingDto.farmName());
+        crop.setSeason(plantingDto.season());
 
         return cropRepository.save(crop);
     }

@@ -31,6 +31,11 @@ public class Crop {
     @Nullable
     private int actualYield;
 
+    @Column
+    private String farmName;
+
+    @Column
+    private String season;
 
     public Crop() {
     }
@@ -41,6 +46,16 @@ public class Crop {
         this.plantedArea = plantedArea;
         this.expectedYield = expectedYield;
         this.actualYield = actualYield;
+    }
+
+    public Crop(Long id, CropType cropType, int plantedArea, int expectedYield, int actualYield, String farmName, String season) {
+        this.id = id;
+        this.cropType = cropType;
+        this.plantedArea = plantedArea;
+        this.expectedYield = expectedYield;
+        this.actualYield = actualYield;
+        this.farmName = farmName;
+        this.season = season;
     }
 
     public Long getId() {
@@ -81,5 +96,21 @@ public class Crop {
 
     public void setActualYield(int actualYield) {
         this.actualYield = actualYield;
+    }
+
+    public String getFarmName() {
+        return farmName;
+    }
+
+    public void setFarmName(String farmName) {
+        this.farmName = farmName;
+    }
+
+    public String getSeason() {
+        return season;
+    }
+
+    public void setSeason(String season) {
+        this.season = season;
     }
 }
